@@ -48,10 +48,18 @@
             animation: accordion-up 0.2s ease-out;
         }
 
-        /* AJOUT: Style pour cacher les éléments avant l'animation Scroll Reveal pour éviter le "flash" */
-        .reveal-up, .reveal-left, .reveal-right, .reveal-card {
-            visibility: hidden;
+        /* =================================================================
+           MODIFICATION : Le style qui cache les éléments est maintenant
+           conditionnel et ne s'applique que sur les grands écrans.
+           ================================================================= */
+        @media (min-width: 1024px) {
+            .reveal-up, .reveal-left, .reveal-right, .reveal-card {
+                visibility: hidden;
+            }
         }
+        /* =================================================================
+           FIN DE LA MODIFICATION
+           ================================================================= */
     </style>
     <script>
         // Configuration personnalisée de Tailwind CSS
@@ -196,7 +204,7 @@
         </section>
 
 
-<!-- =================================================================
+    <!-- =================================================================
 SECTION: À Propos
 ================================================================== -->
 <section id="a-propos" class="py-20 bg-gradient-soft">
@@ -212,7 +220,7 @@ SECTION: À Propos
                             src="images/portrait-alexandre-moreau.webp" 
                             alt="Portrait d'Alexandre Moreau, coach sportif souriant" 
                             class="rounded-lg shadow-lg w-full h-auto object-cover aspect-[4/5]"
-                            loading="lazy" <!-- AJOUT: Lazy Loading -->
+                            loading="lazy"
                             width="400"
                             height="500">
                     </div>
@@ -928,7 +936,7 @@ SECTION: À Propos
                 });
             });
 
-            // --- AJOUT: Initialisation de Scroll Reveal pour les écrans larges ---
+            // --- Initialisation de Scroll Reveal pour les écrans larges ---
             // On vérifie si l'écran est plus grand que 1024px
             if (window.matchMedia('(min-width: 1024px)').matches) {
                 

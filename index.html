@@ -582,7 +582,7 @@ SECTION: À Propos
             </div>
         </section>
 
-        <!-- =================================================================
+                <!-- =================================================================
         SECTION: Prise de Rendez-vous
         ================================================================== -->
         <section id="prise-rendez-vous" class="py-20 bg-gradient-soft">
@@ -590,39 +590,111 @@ SECTION: À Propos
                 <div class="max-w-4xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Prêt(e) à faire le premier pas ?</h2>
                     <p class="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">Réservez votre bilan énergie gratuit directement dans l'agenda ci-dessous. C'est le moment idéal pour échanger en toute confiance sur vos objectifs.</p>
-                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-8 md:p-12 shadow-strong">
-                        <div class="text-center mb-8">
-                            <div class="flex justify-center mb-6">
-                                <div class="p-4 rounded-full bg-success text-success-foreground">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                    
+                    <!-- Widget Calendly intégré -->
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-strong overflow-hidden relative">
+                        <!-- Badge Calendly -->
+                        <div class="absolute top-4 -right-11 transform rotate-45 bg-gray-800 text-white text-xs uppercase tracking-wider font-semibold px-12 py-1 shadow-md z-10">
+                            Calendly
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2">
+                            <!-- Colonne de gauche : Informations -->
+                            <div class="p-8 border-b lg:border-b-0 lg:border-r border-border">
+                                <div class="flex items-center mb-6">
+                                    <img src="images/portrait-alexandre-moreau.webp" alt="Portrait d'Alexandre Moreau" class="w-16 h-16 rounded-full mr-4 object-cover">
+                                    <div>
+                                        <p class="text-muted-foreground">Alexandre Moreau</p>
+                                        <h3 class="text-2xl font-bold text-foreground">Bilan Énergie Offert</h3>
+                                    </div>
+                                </div>
+                                <div class="flex items-center text-muted-foreground text-sm mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    <span>30 min</span>
+                                </div>
+                                <p class="text-muted-foreground mb-6">Cet appel de 30 minutes est la première étape, gratuite et sans engagement, pour faire le point sur votre situation.</p>
+                                
+                                <p class="font-semibold text-foreground mb-3">Objectif :</p>
+                                <ul class="space-y-2 text-muted-foreground">
+                                    <li class="flex items-start"><span class="mr-2">🤝</span>Discuter de vos objectifs et de votre situation.</li>
+                                    <li class="flex items-start"><span class="mr-2">❓</span>Répondre à toutes vos questions.</li>
+                                    <li class="flex items-start"><span class="mr-2">✅</span>Valider ensemble si mon approche est la bonne pour vous.</li>
+                                </ul>
+                                
+                                <p class="text-muted-foreground mt-6 text-sm">C'est un échange simple, bienveillant et sans aucun engagement.</p>
+                                <p class="font-semibold text-foreground mt-4">J'ai hâte d'échanger avec vous !</p>
+                                <p class="text-primary font-semibold mt-4">Alexandre</p>
+                            </div>
+
+                            <!-- Colonne de droite : Calendrier -->
+                            <div class="p-8">
+                                <h4 class="text-lg font-semibold text-center mb-4">Sélectionnez la date et l'heure</h4>
+                                <div class="flex justify-between items-center mb-4">
+                                    <button class="p-2 rounded-full hover:bg-muted/50 transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m15 18-6-6 6-6"></path></svg>
+                                    </button>
+                                    <span class="font-semibold text-foreground">Septembre 2025</span>
+                                    <button class="p-2 rounded-full hover:bg-muted/50 transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m9 18 6-6-6-6"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="grid grid-cols-7 text-center text-xs text-muted-foreground mb-2">
+                                    <span>LUN.</span><span>MAR.</span><span>MER.</span><span>JEU.</span><span>VEN.</span><span>SAM.</span><span>DIM.</span>
+                                </div>
+                                <div class="grid grid-cols-7 text-center gap-1">
+                                    <!-- Dates du mois (exemple statique) -->
+                                    <div class="p-2 text-muted-foreground/50">1</div>
+                                    <div class="p-2 text-muted-foreground/50">2</div>
+                                    <div class="p-2 text-muted-foreground/50">3</div>
+                                    <div class="p-2 text-muted-foreground/50">4</div>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">5</button>
+                                    <div class="p-2 text-muted-foreground/50">6</div>
+                                    <div class="p-2 text-muted-foreground/50">7</div>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">8</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">9</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">10</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">11</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">12</button>
+                                    <div class="p-2 text-muted-foreground/50">13</div>
+                                    <div class="p-2 text-muted-foreground/50">14</div>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">15</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">16</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">17</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">18</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">19</button>
+                                    <div class="p-2 text-muted-foreground/50">20</div>
+                                    <div class="p-2 text-muted-foreground/50">21</div>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">22</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">23</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">24</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">25</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">26</button>
+                                    <div class="p-2 text-muted-foreground/50">27</div>
+                                    <div class="p-2 text-muted-foreground/50">28</div>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">29</button>
+                                    <button class="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors">30</button>
+                                </div>
+                                <div class="mt-6">
+                                    <p class="text-sm font-semibold mb-2 text-foreground">Fuseau horaire</p>
+                                    <div class="flex items-center text-sm text-primary cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                                        <span>Heure de l’Europe (Paris) ▼</span>
+                                    </div>
                                 </div>
                             </div>
-                            <h3 class="text-2xl font-bold text-foreground mb-4">Bilan Énergie Offert (30 min)</h3>
-                            <p class="text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">Cet appel confidentiel et sans engagement est l'occasion de faire connaissance. Vous pourrez m'exposer votre situation, vos défis et vos envies. Je répondrai à toutes vos questions et nous verrons ensemble si mon approche est celle qui vous convient pour retrouver la forme et la vitalité.</p>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-6 mb-8">
-                            <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span class="text-muted-foreground">30 minutes d'échange personnalisé</span></div>
-                            <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span class="text-muted-foreground">Par téléphone ou visioconférence</span></div>
-                            <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg><span class="text-muted-foreground">100% gratuit et sans engagement</span></div>
-                            <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><span class="text-muted-foreground">Créneaux disponibles 7j/7</span></div>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class="mb-4 ring-offset-background py-2 inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-hero text-white hover:shadow-glow transform hover:scale-105 transition-all duration-300 shadow-strong h-14 rounded-md px-12 text-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
-                                Réserver mon créneau gratuit
-                            </a>
-                            <p class="text-sm text-muted-foreground">Sélectionnez votre créneau en quelques clics</p>
                         </div>
                     </div>
+                    
+                    <!-- Section conservée comme demandé -->
                     <div class="rounded-lg border text-card-foreground shadow-sm mt-8 p-6 bg-muted/30">
                         <h4 class="font-semibold text-foreground mb-4">Ce que nous aborderons ensemble :</h4>
-                        <div class="space-y-2 text-sm text-muted-foreground">
-                            <p>• Votre objectif n°1 en faisant appel à un coach</p>
-                            <p>• Votre situation actuelle et vos contraintes</p>
-                            <p>• Vos expériences passées avec le sport</p>
-                            <p>• Comment mon approche peut vous aider</p>
-                            <p>• Les prochaines étapes si nous décidons de travailler ensemble</p>
-                        </div>
+                        <ul class="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                            <li>Votre objectif n°1 en faisant appel à un coach</li>
+                            <li>Votre situation actuelle et vos contraintes</li>
+                            <li>Vos expériences passées avec le sport</li>
+                            <li>Comment mon approche peut vous aider</li>
+                            <li>Les prochaines étapes si nous décidons de travailler ensemble</li>
+                        </ul>
                     </div>
                 </div>
             </div>
